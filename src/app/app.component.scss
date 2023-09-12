@@ -1,0 +1,36 @@
+body, html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.main-container {
+  background-color: #10146b; /* Substitua pela cor que desejar */
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center
+}
+
+.router-container {
+  width: 90%;
+  max-width: 1600px;
+  
+}
+
+.ellipse-container {
+  position: absolute;
+  bottom: 0; /* Coloca o contêiner de elipses na parte inferior do contêiner principal */
+  left: 0; /* Coloca o contêiner de elipses na extremidade esquerda do contêiner principal */
+}
+
+.ellipse-lateral {
+  position: absolute;
+  top: -150%; /* Ajuste a porcentagem conforme necessário para a posição desejada */
+  left: 0;
+}
+
+.ellipse-baixo {
+  position: relative;
+  /* A imagem "Ellipse baixo" permanece na posição padrão, não precisa de posicionamento absoluto aqui */
+}

@@ -1,0 +1,62 @@
+.container{
+  display: flex;
+  justify-content: center;
+  }
+
+.title{
+  color: #fff;
+  font-size: 50px;
+  margin-top: 50px;
+  font-weight: 500;
+  font-family: 'Roboto';
+
+}
+
+.subtitle{
+  color: #fff;
+  margin-top: 35px;
+  margin-left: 17%;
+  font-size: 20px;
+  font-family: 'Roboto';
+}
+
+.cards-container {
+  margin-top: 88px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  }
+  
+  mat-card img{
+    object-fit: cover; /*this makes the image in src fit to the size specified below*/
+    width: 100%; /* Here you can use wherever you want to specify the width and also the height of the <img>*/
+    height: 240px;
+  }
+
+.example-card {
+    margin: 0 18px;
+    background-color: #fff;
+    border-radius: 9px;
+    
+  
+  width: 280px;
+}
+
+.button{
+  display: flex;
+  align-items: center;
+  border: 1px solid;
+}
+
+mat-card-actions{
+  display: flex;
+  justify-content: center;
+
+}
+
+mat-card-title{
+  color: #10146B
+}
+
+
+

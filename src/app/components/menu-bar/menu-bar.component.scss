@@ -1,0 +1,44 @@
+.container {
+  display: flex;
+  align-items: center; /* Alinhar verticalmente os elementos no centro */
+  padding: 15px 0; /* Adicionar espaço ao redor do conteúdo */
+  background-color: transparent; /* Fundo transparente */
+  justify-content: space-between;
+
+}
+
+img {
+  max-height: 500px; /* Tamanho máximo da imagem */
+  margin-right: 250px; /* Espaçamento à direita da imagem */
+  
+}
+
+.button-options {
+  color: #fff; /* Cor do texto branco */
+  cursor: pointer;
+  font-size: 16px;
+ 
+  font-weight: 500;
+  font-family: 'Roboto';
+
+}
+
+.social-link {
+  display: flex;
+flex-direction: column;
+color: #fff;
+}
+
+.social-link:hover {
+  color: #0056b3; /* Cor alterada ao passar o mouse (ajuste conforme necessário) */
+
+}
+
+.content{
+  display: flex;
+  gap: 30px;
+  flex-direction: row;
+  flex-basis: 23%;
+}
+
+
