@@ -16,7 +16,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MenuBarComponent,
     AboutComponent,
   ],
-  imports: [AppRoutingModule, BrowserModule, AngularMaterialModule, BrowserAnimationsModule],
+  imports: [
+    AppRoutingModule,
+    BrowserModule,
+    AngularMaterialModule,
+    BrowserAnimationsModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
