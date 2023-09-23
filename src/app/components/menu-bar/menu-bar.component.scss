@@ -4,13 +4,15 @@
   padding: 15px 0; /* Adicionar espaço ao redor do conteúdo */
   background-color: transparent; /* Fundo transparente */
   justify-content: space-between;
-
 }
 
 img {
   max-height: 500px; /* Tamanho máximo da imagem */
   margin-right: 250px; /* Espaçamento à direita da imagem */
-  
+  @media only screen and (max-width: 768px) {
+  margin-right: 0
+
+  } 
 }
 
 .button-options {
@@ -27,6 +29,7 @@ img {
   display: flex;
 flex-direction: column;
 color: #fff;
+@media only screen and (max-width: 768px) {display: none}
 }
 
 .social-link:hover {
@@ -39,6 +42,19 @@ color: #fff;
   gap: 30px;
   flex-direction: row;
   flex-basis: 23%;
+  @media only screen and (max-width: 768px) {display: none}
+
 }
 
+.mobile-menu-container{
+@media only screen and (min-width: 768px) {display: none}
+button {
+  color: white
+}
+}
+
+mat-menu-item{
+  display: flex;
+  align-items: center;
+}
 

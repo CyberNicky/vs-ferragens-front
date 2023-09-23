@@ -9,15 +9,16 @@
   margin-top: 50px;
   font-weight: 500;
   font-family: 'Roboto';
+  line-height: 55px;
 
 }
 
 .subtitle{
   color: #fff;
   margin-top: 35px;
-  margin-left: 17%;
   font-size: 20px;
   font-family: 'Roboto';
+  text-align: center;
 }
 
 .cards-container {
@@ -25,6 +26,7 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
+  flex-wrap: wrap;
   }
   
   mat-card img{
@@ -34,7 +36,7 @@
   }
 
 .example-card {
-    margin: 0 18px;
+    margin: 18px;
     background-color: #fff;
     border-radius: 9px;
     
