@@ -19,10 +19,14 @@ img {
   color: #fff; /* Cor do texto branco */
   cursor: pointer;
   font-size: 16px;
- 
   font-weight: 500;
   font-family: 'Roboto';
+  padding: 4px;
 
+}
+
+.button-options:hover{
+  color: #0056b3;
 }
 
 .social-link {
