@@ -24,6 +24,7 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
+import { MatMenuModule } from '@angular/material/menu';
 
 @NgModule({
   imports: [
@@ -34,6 +35,7 @@ import { MatAutocompleteModule } from '@angular/material/autocomplete';
     MatNativeDateModule,
     BrowserModule,
     BrowserAnimationsModule,
+    MatMenuModule,
   ],
   exports: [
     MatSidenavModule,
@@ -55,6 +57,7 @@ import { MatAutocompleteModule } from '@angular/material/autocomplete';
     MatDatepickerModule,
     MatNativeDateModule,
     MatAutocompleteModule,
+    MatMenuModule,
   ],
 })
 export class AngularMaterialModule {}
