@@ -1,7 +1,13 @@
 <div class="container">
-  <img src="../../../assets/png/logo.png" alt="logomarca" />
+  <a class="image" (click)="navigateTo('')">
+    <img src="../../../assets/png/logo.png" alt="logomarca" />
+  </a>
   <div class="content">
-    <p mat-flat-button (click)="navigateTo('produtos')" class="button-options">
+    <p
+      mat-flat-button
+      (click)="navigateTo('categorias')"
+      class="button-options"
+    >
       Produtos
     </p>
     <p (click)="navigateTo('sobre')" class="button-options">Sobre</p>

@@ -1,0 +1,68 @@
+.main-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  overflow: auto; /* Adiciona rolagem se o conteúdo exceder a altura */
+}
+
+.main {
+  width: 60%; /* Reduz a largura da div main */
+  box-sizing: border-box;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centraliza o conteúdo verticalmente */
+  background-color: #DDDDDE;
+
+}
+
+.image img {
+  margin-top: 40px;
+  max-width: 100%;
+  max-height: 400px; /* Define a altura máxima da imagem */
+  border-radius: 5px;
+}
+
+.image-scroll {
+  display: flex;
+  flex-direction: row;
+}
+
+.image-scroll img {
+  max-width: 100px; /* Tamanho máximo das imagens de rolagem */
+  margin: 0 10px; /* Espaçamento entre as imagens de rolagem */
+  border-radius: 5px;
+  margin-top: 15px;
+
+}
+
+.container {
+  width: 40%;
+  box-sizing: border-box;
+  padding: 20px;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+
+}
+.product-info{
+  flex: 1;
+  
+}
+h1 {
+  font-size: 24px;
+  margin-bottom: 10px; /* Espaçamento entre o título e a descrição */
+  font-weight: 500;
+  color: #10146B;
+}
+.description{
+  color: #7c7a7a;
+  font-weight: 500;
+  margin-top: 40px;
+}
+
+.button{
+  width: 100%;
+
+}

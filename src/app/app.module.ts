@@ -8,6 +8,10 @@ import { MenuBarComponent } from './components/menu-bar/menu-bar.component';
 import { AboutComponent } from './pages/about/about.component';
 import { AngularMaterialModule } from './modules/angular-material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ProductsComponent } from './pages/products/products.component';
+import { ProductModelComponent } from './pages/product-model/product-model.component';
+import { CommonModule } from '@angular/common';
+import { BudgetScreenComponent } from './pages/budget-screen/budget-screen.component';
 
 @NgModule({
   declarations: [
@@ -15,14 +19,19 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     WelcomeComponent,
     MenuBarComponent,
     AboutComponent,
+    ProductsComponent,
+    ProductModelComponent,
+    BudgetScreenComponent,
   ],
   imports: [
     AppRoutingModule,
     BrowserModule,
     AngularMaterialModule,
     BrowserAnimationsModule,
+    CommonModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
+  exports: [CommonModule], //add common module here
 })
 export class AppModule {}

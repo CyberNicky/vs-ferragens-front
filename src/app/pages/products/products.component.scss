@@ -1,11 +1,6 @@
 .container{
   display: flex;
-  justify-content: space-between;
-  
-  }
-
-  .title-container{
-    margin-top: 10%;
+  justify-content: center;
   }
 
 .title{
@@ -15,21 +10,8 @@
   font-weight: 500;
   font-family: 'Roboto';
   line-height: 55px;
+  text-align: center;
 
-}
-.button-product{
-  margin-top: 30px;
-  height: 60px;
-  font-family: 'Roboto';
-
-}
-.img{
-  margin-top: 90px;
-  margin-right: 150px;
-  width: 600px;
-  border-radius: 30px;
-  box-shadow:  5px 6px 8px 6px #432da5;
- 
 }
 
 .subtitle{
@@ -37,6 +19,7 @@
   margin-top: 35px;
   font-size: 20px;
   font-family: 'Roboto';
+  text-align: center;
 }
 
 .cards-container {

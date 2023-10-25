@@ -25,6 +25,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatMenuModule } from '@angular/material/menu';
+import { MatSelectModule } from '@angular/material/select';
 
 @NgModule({
   imports: [
@@ -58,6 +59,7 @@ import { MatMenuModule } from '@angular/material/menu';
     MatNativeDateModule,
     MatAutocompleteModule,
     MatMenuModule,
+    MatSelectModule,
   ],
 })
 export class AngularMaterialModule {}

@@ -1,0 +1,41 @@
+.form  {
+  display: flex;
+  flex-direction: column;
+  margin-left: 30%;
+margin-top: 4%;
+gap: 10px;
+}
+
+.name-input{
+  min-width: 150px;
+  max-width: 500px;
+}
+
+.input-name{
+  width: 435px
+}
+
+.input-form{
+  display: flex;
+}
+.form-content{
+  display: flex;
+  gap: 10px;
+}
+.cor{
+  width: 435px;
+}
+
+.button{
+  margin-left: 4%;
+  width: 300px;
+  // padding: 30px;
+  margin-left: 35%;
+
+  
+}
+
+.container{
+  border: solid 1px #000;
+  padding: 50px;
+}

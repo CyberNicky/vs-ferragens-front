@@ -1,20 +1,10 @@
 <div class="container">
   <div class="title-container">
-    <h1 class="title">Bem Vindo a VS Ferragens</h1>
-    <p class="subtitle">A empresa parceira que sua casa precisa</p>
-    <button
-      mat-flat-button
-      class="button-product"
-      (click)="navigateTo('categorias')"
-    >
-      Conheça nossos produtos
-    </button>
-  </div>
-  <div class="image">
-    <img class="img" src="../../../assets/jpg/aluminio.jpg" alt="" />
+    <h1 class="title">O produto que você precisa!</h1>
+    <p class="subtitle">Selecione qualquer categoria para ver mais.</p>
   </div>
 </div>
-<!-- <div class="cards-container">
+<div class="cards-container">
   <mat-card class="example-card">
     <mat-card-header>
       <div mat-card-avatar class="example-header-image"></div>
@@ -27,7 +17,12 @@
     />
 
     <mat-card-actions>
-      <button mat-button color="primary" class="button">
+      <button
+        mat-button
+        color="primary"
+        class="button"
+        (click)="navigateTo('produtos')"
+      >
         Clique para ver mais
       </button>
     </mat-card-actions>
@@ -40,7 +35,12 @@
     <img mat-card-image src="../../../assets/jpeg/boxbanheiro.jpeg" alt="box" />
 
     <mat-card-actions>
-      <button mat-button color="primary" class="button">
+      <button
+        mat-button
+        color="primary"
+        class="button"
+        (click)="navigateTo('produtos')"
+      >
         Clique para ver mais
       </button>
     </mat-card-actions>
@@ -53,7 +53,12 @@
     <img mat-card-image src="../../../assets/jpeg/motor.jpeg" alt="motor" />
 
     <mat-card-actions>
-      <button mat-button color="primary" class="button">
+      <button
+        mat-button
+        color="primary"
+        class="button"
+        (click)="navigateTo('produtos')"
+      >
         Clique para ver mais
       </button>
     </mat-card-actions>
@@ -66,9 +71,14 @@
     <img mat-card-image src="../../../assets/jpg/janela.jpg" alt="Janelas" />
 
     <mat-card-actions>
-      <button mat-button color="primary" class="button">
+      <button
+        mat-button
+        color="primary"
+        class="button"
+        (click)="navigateTo('produtos')"
+      >
         Clique para ver mais
       </button>
     </mat-card-actions>
   </mat-card>
-</div> -->
+</div>
