@@ -1,35 +1,19 @@
 <div class="main-container">
   <div class="main">
     <div class="image">
-      <img [src]="imageAtual.value" [alt]="imageAtual.name" />
+      <img src="{{ product?.imageUrl }}" />
     </div>
     <div class="image-scroll">
-      <div
-        class="img-preview-container"
-        (click)="changeImage(image.id)"
-        *ngFor="let image of product.images"
-        [ngStyle]="{ border: image.id === imageAtual.id ? 'solid' : 'none' }"
-      >
-        <img [alt]="image.name" [src]="image.value" />
-      </div>
+      <div class="img-preview-container"></div>
 
       <!-- Adicione mais imagens de outras janelas aqui -->
     </div>
   </div>
   <div class="container">
     <div class="product-info">
-      <h1>Modelos de Janelas</h1>
+      <h1>Modelos de {{ product?.name }}</h1>
       <p class="description">
-        Esta janela em Grade de alumínio combina a durabilidade e elegância do
-        alumínio com uma grade decorativa. A grade, estrategicamente
-        posicionada, oferece segurança e um design estético, proporcionando um
-        toque clássico e atemporal à janela.
-      </p>
-      <p class="description">
-        Janela de alumínio tipo maxiar é projetada para proporcionar máxima
-        ventilação e controle de ar em ambientes. Com um mecanismo eficiente, é
-        possível abrir a janela na posição desejada, permitindo a entrada de ar
-        fresco.
+        {{ product?.description }}
       </p>
     </div>
     <button

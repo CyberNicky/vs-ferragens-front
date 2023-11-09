@@ -12,6 +12,7 @@ import { ProductsComponent } from './pages/products/products.component';
 import { ProductModelComponent } from './pages/product-model/product-model.component';
 import { CommonModule } from '@angular/common';
 import { BudgetScreenComponent } from './pages/budget-screen/budget-screen.component';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { BudgetScreenComponent } from './pages/budget-screen/budget-screen.compo
     AngularMaterialModule,
     BrowserAnimationsModule,
     CommonModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
