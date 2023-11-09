@@ -15,9 +15,9 @@ export class ProductsService {
     return this.http.get<ProductsInterface[]>(url);
   }
 
-  getProduct(id: number): Observable<ProductInterface[]> {
+  getProduct(id: number): Observable<ProductInterface> {
     const url = environment.api_url + `product/${id}`;
-    return this.http.get<ProductInterface[]>(url);
+    return this.http.get<ProductInterface>(url);
   }
   // PostBudget(id: number): Observable<ProductInterface[]> {
   //   const url = environment.api_url + `budget/${id}`;

@@ -29,9 +29,15 @@ export class BudgetScreenComponent {
     this.productService
       .getProduct(id)
       .pipe(take(1))
-      .subscribe((inputs) => {
-        this.inputs = inputs.map((item: any) => item.input);
-        inputs.forEach(({ input }: any) => {
+      .subscribe((product) => {
+        this.inputs = product.inputs;
+        console.log(
+          product,
+          product.inputs,
+          product.inputs.map((item: any) => item.input),
+          this.inputs
+        );
+        product.inputs.forEach((input: any) => {
           this.inputData.push(
             new FormGroup({
               id: new FormControl(input.id),
