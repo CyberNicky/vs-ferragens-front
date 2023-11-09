@@ -24,7 +24,7 @@ const routes: Routes = [
     component: ProductModelComponent,
   },
   {
-    path: 'orçamento',
+    path: 'orçamento/:id',
     component: BudgetScreenComponent,
   },
 ];

@@ -26,6 +26,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatSelectModule } from '@angular/material/select';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   imports: [
@@ -60,6 +61,8 @@ import { MatSelectModule } from '@angular/material/select';
     MatAutocompleteModule,
     MatMenuModule,
     MatSelectModule,
+    ReactiveFormsModule,
+    FormsModule,
   ],
 })
 export class AngularMaterialModule {}

@@ -1,4 +1,22 @@
-<form class="form">
+<form class="input-fields">
+  <div
+    class="input-group-container"
+    *ngFor="let input of inputData.controls; let i = index"
+  >
+    <div class="input-group">
+      <mat-form-field appearance="outline">
+        <mat-label>{{ inputs[i].name }}</mat-label>
+        <input
+          matInput
+          [formControl]="getFormControl(i)"
+          [placeholder]="inputs[i].name"
+        />
+      </mat-form-field>
+    </div>
+  </div>
+</form>
+
+<!-- <form class="form" >
   <div class="name-input">
     <mat-form-field class="input-name">
       <mat-label>Nome</mat-label>
@@ -71,3 +89,4 @@
     <mat-icon>download</mat-icon>
   </div>
 </div> -->
+-->

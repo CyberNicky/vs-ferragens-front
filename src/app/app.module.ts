@@ -13,6 +13,7 @@ import { ProductModelComponent } from './pages/product-model/product-model.compo
 import { CommonModule } from '@angular/common';
 import { BudgetScreenComponent } from './pages/budget-screen/budget-screen.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [

@@ -28,9 +28,9 @@ export class ProductModelComponent implements OnInit {
   //   const image = this.product.images.find((image) => image.id === id)!;
   //   this.imageAtual = image;
   // }
-  navigateTo(page: string) {
+  navigateTo(page: string, id: number) {
     // Use o router para navegar para a página desejada
-    this.router.navigate([page]);
+    this.router.navigate([page, id]);
   }
 
   goToLink(url: string) {

@@ -19,4 +19,8 @@ export class ProductsService {
     const url = environment.api_url + `product/${id}`;
     return this.http.get<ProductInterface[]>(url);
   }
+  // PostBudget(id: number): Observable<ProductInterface[]> {
+  //   const url = environment.api_url + `budget/${id}`;
+  //   return this.http.post<ProductInterface[]>(url);
+  // }
 }
