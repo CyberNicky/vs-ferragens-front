@@ -3,11 +3,17 @@ export interface ProductInterface {
   name: string;
   description: string;
   imageUrl: string;
-  inputs: ProductInputInterface[];
+  inputs: InputInterface[];
 }
 
-export interface ProductInputInterface {
+export interface OptionInterface {
   id: number;
   name: string;
-  type: string;
+}
+
+export interface InputInterface {
+  id: number;
+  name: string;
+  type: 'TEXT' | 'NUMBER' | 'SELECT';
+  options?: OptionInterface[];
 }

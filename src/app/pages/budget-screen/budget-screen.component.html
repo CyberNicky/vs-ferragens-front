@@ -1,92 +1,34 @@
-<form class="input-fields">
-  <div
-    class="input-group-container"
-    *ngFor="let input of inputData.controls; let i = index"
-  >
-    <div class="input-group">
-      <mat-form-field appearance="outline">
-        <mat-label>{{ inputs[i].name }}</mat-label>
-        <input
-          matInput
-          [formControl]="getFormControl(i)"
-          [placeholder]="inputs[i].name"
-        />
-      </mat-form-field>
-    </div>
-  </div>
-</form>
+<div class="main-container">
+  <form class="input-fields" [action]="">
+    <mat-form-field *ngFor="let input of inputData.controls; let i = index">
+      <mat-label>{{ inputs[i].name }}</mat-label>
+      <input
+        *ngIf="inputs[i].type !== 'SELECT'"
+        matInput
+        [formControl]="getFormControl(i)"
+        [placeholder]="inputs[i].name"
+      />
+      <mat-select
+        *ngIf="inputs[i].type === 'SELECT'"
+        [formControl]="getFormControl(i)"
+        [placeholder]="inputs[i].name"
+      >
+        <mat-option
+          *ngFor="let option of inputs[i].options"
+          [value]="option.name"
+        >
+          {{ option.name }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
 
-<!-- <form class="form" >
-  <div class="name-input">
-    <mat-form-field class="input-name">
-      <mat-label>Nome</mat-label>
-      <input matInput placeholder="" />
-    </mat-form-field>
+    <button mat-raised-button color="primary" (click)="onSubmit()">
+      <mat-icon>download</mat-icon>
+      Simular orçamento
+    </button>
+  </form>
+  <div class="img-container">
+    <p>Imagem ilustrativa</p>
+    <img class="img" src="{{ product?.imageUrl }}" width="380" />
   </div>
-  <div class="form-content">
-    <mat-form-field class="input-form">
-      <mat-label>Largura</mat-label>
-      <input matInput placeholder="" />
-    </mat-form-field>
-    <mat-form-field class="input-form">
-      <mat-label>Altura</mat-label>
-      <input matInput placeholder="" />
-    </mat-form-field>
-  </div>
-  <div class="options-cor">
-    <mat-form-field class="cor">
-      <mat-label>Cor do alumínio</mat-label>
-      <mat-select disableRipple>
-        <mat-option value="1">Cinza</mat-option>
-        <mat-option value="2">Amarelo</mat-option>
-        <mat-option value="3">Vermelho</mat-option>
-      </mat-select>
-    </mat-form-field>
-  </div>
-  <div class="options-cor">
-    <mat-form-field class="cor">
-      <mat-label>Tipo de janela</mat-label>
-      <mat-select disableRipple>
-        <mat-option value="1">Deslizante</mat-option>
-        <mat-option value="2">Pivotante</mat-option>
-      </mat-select>
-    </mat-form-field>
-  </div>
-  <div class="options-cor">
-    <mat-form-field class="cor">
-      <mat-label>Modelo de Janela </mat-label>
-      <mat-select disableRipple>
-        <mat-option value="1">Gradeada</mat-option>
-        <mat-option value="2">Maxim ar</mat-option>
-        <mat-option value="3">Vidro temperado</mat-option>
-        <mat-option value="3">Vidro comum</mat-option>
-      </mat-select>
-    </mat-form-field>
-  </div>
-  <div class="options-cor">
-    <mat-form-field class="cor">
-      <mat-label>Cor do vidro</mat-label>
-      <mat-select disableRipple>
-        <mat-option value="1">Cinza</mat-option>
-        <mat-option value="2">Amarelo</mat-option>
-        <mat-option value="3">Vermelho</mat-option>
-      </mat-select>
-    </mat-form-field>
-    <div class="name-input">
-      <mat-form-field class="input-name">
-        <mat-label>Telefone</mat-label>
-        <input matInput placeholder="" />
-      </mat-form-field>
-    </div>
-  </div>
-</form>
-<button mat-flat-button class="button">
-  <mat-icon>download</mat-icon>Enviar Orçamento
-</button>
-
-<!-- <div class="container">
-  <div class="image-upload">
-    <mat-icon>download</mat-icon>
-  </div>
-</div> -->
--->
+</div>

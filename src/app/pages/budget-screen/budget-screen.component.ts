@@ -1,7 +1,17 @@
 import { Component } from '@angular/core';
-import { FormArray, FormBuilder, FormControl, FormGroup } from '@angular/forms';
+import {
+  FormArray,
+  FormBuilder,
+  FormControl,
+  FormGroup,
+  Validators,
+} from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { take } from 'rxjs';
+import {
+  InputInterface,
+  ProductInterface,
+} from 'src/app/interfaces/productInput.interface';
 import { ProductsService } from 'src/app/services/products.service';
 
 @Component({
@@ -15,33 +25,42 @@ export class BudgetScreenComponent {
     private productService: ProductsService,
     private route: ActivatedRoute
   ) {}
-  form!: FormGroup;
-  inputs: any[] = [];
+  form = new FormGroup({
+    inputData: new FormArray([]),
+  });
+  product!: ProductInterface;
+  inputs: InputInterface[] = [];
 
   get inputData() {
     return this.form.get('inputData') as FormArray;
   }
-  createFormProduct(id: number) {
-    this.form = new FormGroup({
-      inputData: new FormArray([]),
-    });
 
+  onSubmit() {
+    const inputs: any = this.form.value
+      .inputData!.map(
+        (input: any) =>
+          `${this.inputs.find((i) => i.id === input.id)!.name}: ${input.value}`
+      )
+      .join('%0D%0A');
+    const message = `Oi, desejo fazer um orçamento para ${this.product.name} com os seguintes parâmetros:%0D%0A%0D%0A${inputs}`;
+    const url = `https://api.whatsapp.com/send?phone=5582988366137&text=${message}`;
+    console.log(url);
+    window.open(url);
+  }
+
+  createFormProduct(id: number) {
     this.productService
       .getProduct(id)
       .pipe(take(1))
       .subscribe((product) => {
+        this.product = product;
         this.inputs = product.inputs;
-        console.log(
-          product,
-          product.inputs,
-          product.inputs.map((item: any) => item.input),
-          this.inputs
-        );
-        product.inputs.forEach((input: any) => {
+
+        product.inputs.forEach((input) => {
           this.inputData.push(
             new FormGroup({
               id: new FormControl(input.id),
-              value: new FormControl(''),
+              value: new FormControl(null),
             })
           );
         });
@@ -53,7 +72,6 @@ export class BudgetScreenComponent {
 
     return formG.get('value') as FormControl;
   }
-  product!: any;
 
   ngOnInit() {
     const id = this.route.snapshot.paramMap.get('id');
